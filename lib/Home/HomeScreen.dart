@@ -20,7 +20,9 @@ int currentIndex=0;
   Widget build(BuildContext context) {
     return Stack(
       children: [
-         Image.asset('assets/images/bg3.png'),
+         Image.asset('assets/images/bg3.png', width: double.infinity,height: double.infinity,
+         fit: BoxFit.fill,),
+
         Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(

@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:islamiproject/Home/HomeScreen.dart';
+import 'package:islamiproject/Home/Quran/SuraDetailsScreen.dart';
+
 
 void main() {
   runApp( MyApp());
@@ -16,7 +18,8 @@ class MyApp extends StatelessWidget {
       theme: MyThemeData.lightTheme,
       //darkTheme: MyThemeData.darkTheme,
       routes: {
-        HomeScreen.routeName :(BuildContext)=>HomeScreen()
+        HomeScreen.routeName :(BuildContext)=>HomeScreen(),
+        SuraDetailsScreen.routeName :(BuildContext)=> SuraDetailsScreen(),
       },
      initialRoute: HomeScreen.routeName,
     );
@@ -31,6 +34,9 @@ class MyThemeData{
     primaryColor: MyThemeData.primaryColor,
     scaffoldBackgroundColor: Colors.transparent,
     appBarTheme: AppBarTheme(
+      iconTheme: IconThemeData(
+        color: Colors.black,
+      ),
       centerTitle: true,
       backgroundColor: Colors.transparent,
       elevation: 0,
